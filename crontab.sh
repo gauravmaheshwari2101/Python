@@ -7,7 +7,7 @@ GIT_LOGFILE=gitlog_$(date +'%d%m%Y')
 # Define Functions
 #To check whether Directory already exists or not .
 checkdir(){
-if [ -d "Gradle" ]
+if [ -d "Python" ]
 then
     echo "Deleting existing directory and cloning new directory"
     cleanup
