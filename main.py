@@ -1,14 +1,23 @@
-List1 =[8, 9, 3, 61, 10]
-List1.reverse()
-print("The reversed list is", List1)
+#Importing the Package
+import random
+import string
 
-List2 = [91, 67, 120, 34, 76, 54, 78, 87, 56]
-List2.sort()
-print ("The sorted list is", List2)
+print('Hello, Your new Captcha is ..!!')
+#Length of Captcha
+length = 6
 
-List3 = []
-List3= List1.copy()
-print("List3 =", List3)
+#string module is used for defining the data
+lower = string.ascii_lowercase
+upper = string.ascii_uppercase
+num = string.digits
+symbols = string.punctuation
 
-indexvalue = List2[2:6]
-print("The index values are", indexvalue)
+#combining the data and store the data
+combination = lower + upper + num + symbols
+
+#random module to finally generate the captcha.
+temp = random.sample(combination,length)
+captcha = "".join(temp)
+
+#printing the captcha
+print(captcha)
